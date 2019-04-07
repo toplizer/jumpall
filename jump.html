@@ -12,7 +12,7 @@
     }
     function initQQ()
     {
-      mqq.invokeSchema('mqqapi', 'qm', 'qr', {url: 'https://qpay.qq.com/qr/6ef9168c'});
+      mqq.invokeSchema('mqqapi', 'forward', 'url', {url_prefix: btoa('https://qpay.qq.com/qr/6ef9168c'), version: 1, src_type: 'web'});
     }
     requireAPI();
     //var node = document.createElement('iframe');
