@@ -1,3 +1,22 @@
 <html>
- <body>abc</body>
+  <body></body>
+  <script>
+    function requireAPI()
+    {
+      var head = document.head || document.getElementsByTagName("head")[0];
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = 'https://open.mobile.qq.com/sdk/qqapi.js?_bid=152';
+      script.onload = initQQ;
+      head.appendChild(script);
+    }
+    function initQQ()
+    {
+      mqq.invokeSchema('mqqapi', 'qm', 'qr', {url: 'https://qpay.qq.com/qr/6ef9168c'});
+    }
+    requireAPI();
+    //var node = document.createElement('iframe');
+    //node.src = 'mqqopensdkapi://bizAgent/qm/qr?url='+encodeURI('{$url}');
+    //document.bodyappendChild(node);
+  </script>
 </html>
